@@ -14,7 +14,7 @@
 
     <style type="text/tailwindcss">
       @theme {
-        /* Shifted to a premium, deep blue-leaning teal */
+        /* Premium, deep blue-leaning teal */
         --color-lf-teal: #0a4d68;
         --color-lf-orange: #ff6b35;
         --color-lf-yellow: #facc15;
@@ -291,7 +291,7 @@
             <p class="text-sm text-slate-400">For 1 to 19 sales in a month.</p>
           </div>
           <div
-            class="bg-lf-teal/20 border border-lf-teal p-8 rounded-3xl relative overflow-hidden"
+            class="bg-lf-teal/40 border border-lf-teal p-8 rounded-3xl relative overflow-hidden"
           >
             <div
               class="absolute top-0 right-0 bg-lf-orange text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider"
@@ -314,48 +314,69 @@
         </div>
 
         <div
-          class="bg-white text-slate-900 p-8 md:p-12 rounded-[2rem] shadow-2xl"
+          class="bg-white text-slate-900 p-8 md:p-12 rounded-[2rem] shadow-2xl max-w-2xl mx-auto"
         >
           <h3 class="text-xl font-bold mb-8 text-center text-lf-teal">
-            Earnings Projection Calculator
+            Example Monthly Scenarios
           </h3>
 
-          <div class="mb-10">
+          <div class="space-y-4">
             <div
-              class="flex justify-between text-sm font-bold text-slate-500 mb-4 uppercase tracking-wide"
+              class="flex items-center justify-between p-5 bg-slate-50 rounded-2xl border border-slate-100"
             >
-              <span>Packs Sold (Monthly)</span>
-              <span id="salesDisplay" class="text-lf-orange text-2xl">10</span>
+              <span class="font-semibold text-slate-600">Sell 10 Packs</span>
+              <div class="text-right">
+                <span
+                  class="block text-xs text-slate-400 uppercase tracking-widest font-bold mb-1"
+                  >Earn</span
+                >
+                <span class="text-2xl md:text-3xl font-extrabold text-lf-teal"
+                  >₦30,000</span
+                >
+              </div>
             </div>
-            <input
-              type="range"
-              id="salesSlider"
-              min="10"
-              max="100"
-              step="10"
-              value="10"
-              class="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#ff6b35]"
-            />
             <div
-              class="flex justify-between text-xs text-slate-400 mt-2 font-medium"
+              class="flex items-center justify-between p-5 bg-lf-orange/5 rounded-2xl border border-lf-orange/20"
             >
-              <span>10</span>
-              <span>50</span>
-              <span>100</span>
+              <span class="font-semibold text-lf-orange">Sell 20 Packs</span>
+              <div class="text-right">
+                <span
+                  class="block text-xs text-slate-400 uppercase tracking-widest font-bold mb-1"
+                  >Earn</span
+                >
+                <span class="text-2xl md:text-3xl font-extrabold text-lf-teal"
+                  >₦100,000</span
+                >
+              </div>
             </div>
-          </div>
-
-          <div class="text-center">
-            <p
-              class="text-sm text-slate-400 uppercase tracking-widest font-semibold mb-2"
+            <div
+              class="flex items-center justify-between p-5 bg-lf-orange/5 rounded-2xl border border-lf-orange/20"
             >
-              Projected Income
-            </p>
-            <p
-              class="text-5xl md:text-6xl font-extrabold text-lf-teal tracking-tighter"
+              <span class="font-semibold text-lf-orange">Sell 50 Packs</span>
+              <div class="text-right">
+                <span
+                  class="block text-xs text-slate-400 uppercase tracking-widest font-bold mb-1"
+                  >Earn</span
+                >
+                <span class="text-2xl md:text-3xl font-extrabold text-lf-teal"
+                  >₦250,000</span
+                >
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-between p-5 bg-lf-teal/10 rounded-2xl border border-lf-teal/20"
             >
-              ₦<span id="earningsDisplay">30,000</span>
-            </p>
+              <span class="font-semibold text-lf-teal">Sell 100 Packs</span>
+              <div class="text-right">
+                <span
+                  class="block text-xs text-slate-400 uppercase tracking-widest font-bold mb-1"
+                  >Earn</span
+                >
+                <span class="text-2xl md:text-3xl font-extrabold text-lf-teal"
+                  >₦500,000</span
+                >
+              </div>
+            </div>
           </div>
         </div>
 
@@ -396,39 +417,53 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div
-            class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 text-center"
+            class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 text-center flex flex-col items-center"
           >
-            <div class="text-4xl mb-6">✈️</div>
-            <h3 class="text-2xl font-bold text-lf-teal mb-2 tracking-tight">
-              1,000 Sales
+            <div class="text-4xl mb-4">✈️</div>
+            <span
+              class="inline-block bg-slate-100 text-slate-600 px-4 py-1.5 rounded-full text-sm font-bold tracking-wide mb-6"
+              >1,000 Sales Requirement</span
+            >
+            <h3
+              class="text-2xl font-bold text-lf-teal mb-3 tracking-tight leading-snug"
+            >
+              International Vacation <br /><span
+                class="text-lg text-slate-500 font-medium"
+                >or a Plot of Land</span
+              >
             </h3>
-            <p class="text-sm text-slate-500 leading-relaxed">
-              All Expense Paid International Vacation or a Plot of Land worth
-              ₦1,000,000.
-            </p>
+            <p class="text-lf-orange font-bold">Value: ₦1,000,000</p>
           </div>
           <div
-            class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 text-center relative overflow-hidden"
+            class="bg-white p-10 rounded-3xl shadow-md border-2 border-lf-orange text-center flex flex-col items-center relative overflow-hidden transform md:-translate-y-4"
           >
-            <div class="absolute top-0 left-0 w-full h-1 bg-lf-orange"></div>
-            <div class="text-4xl mb-6">🚘</div>
-            <h3 class="text-2xl font-bold text-lf-teal mb-2 tracking-tight">
-              5,000 Sales
+            <div class="absolute top-0 left-0 w-full h-1.5 bg-lf-orange"></div>
+            <div class="text-4xl mb-4">🚘</div>
+            <span
+              class="inline-block bg-lf-orange/10 text-lf-orange px-4 py-1.5 rounded-full text-sm font-bold tracking-wide mb-6"
+              >5,000 Sales Requirement</span
+            >
+            <h3
+              class="text-2xl md:text-3xl font-bold text-lf-teal mb-3 tracking-tight"
+            >
+              A FREE Car
             </h3>
-            <p class="text-sm text-slate-500 leading-relaxed">
-              A FREE car worth ₦8,000,000.
-            </p>
+            <p class="text-lf-orange font-bold">Value: ₦8,000,000</p>
           </div>
           <div
-            class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 text-center"
+            class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 text-center flex flex-col items-center"
           >
-            <div class="text-4xl mb-6">🏡</div>
-            <h3 class="text-2xl font-bold text-lf-teal mb-2 tracking-tight">
-              10,000 Sales
+            <div class="text-4xl mb-4">🏡</div>
+            <span
+              class="inline-block bg-lf-teal/10 text-lf-teal px-4 py-1.5 rounded-full text-sm font-bold tracking-wide mb-6"
+              >10,000 Sales Requirement</span
+            >
+            <h3
+              class="text-2xl font-bold text-lf-teal mb-3 tracking-tight leading-snug"
+            >
+              Housing Fund
             </h3>
-            <p class="text-sm text-slate-500 leading-relaxed">
-              A Housing Fund worth ₦20,000,000.
-            </p>
+            <p class="text-lf-orange font-bold">Value: ₦20,000,000</p>
           </div>
         </div>
       </div>
@@ -444,15 +479,13 @@
         </p>
 
         <div
-          class="bg-slate-100 border-2 border-dashed border-slate-300 rounded-[2rem] w-full max-w-2xl mx-auto aspect-[4/3] flex flex-col items-center justify-center overflow-hidden relative"
+          class="bg-slate-100 rounded-[2rem] w-full max-w-2xl mx-auto aspect-[4/3] flex flex-col items-center justify-center overflow-hidden relative border border-slate-200 shadow-sm"
         >
-          <div class="z-10 flex flex-col items-center">
-            <img
-              src="images/lfi-cert.jpg"
-              alt="Awards and Cheques"
-              class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700 ease-in-out"
-            />
-          </div>
+          <img
+            src="images/lfi-cert.jpg"
+            alt="CAC Registration Certificate"
+            class="absolute inset-0 w-full h-full object-contain p-4"
+          />
         </div>
       </div>
     </section>
@@ -473,73 +506,46 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-20">
           <div
-            class="md:col-span-2 bg-slate-900 border border-slate-700/50 rounded-3xl aspect-video md:aspect-auto flex flex-col items-center justify-center overflow-hidden relative min-h-[300px] group"
+            class="md:col-span-2 bg-slate-900 border border-slate-700/50 rounded-3xl aspect-video md:aspect-auto flex items-center justify-center overflow-hidden relative min-h-[300px]"
           >
             <img
               src="images/livefree2.png"
               alt="Main Stage Celebration"
-              class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700 ease-in-out"
+              class="absolute m-auto max-w-full max-h-full object-contain"
             />
 
             <div
-              class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/20 to-transparent z-10 pointer-events-none"
+              class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent z-10 pointer-events-none"
             ></div>
-
-            <div
-              class="z-20 absolute bottom-6 left-8 text-left pointer-events-none"
-            >
-              <span
-                class="text-white font-bold tracking-wide text-lg drop-shadow-md"
-                >Main Stage Celebrations</span
-              >
-            </div>
           </div>
 
           <div class="flex flex-col gap-4">
             <div
-              class="bg-slate-900 border border-slate-700/50 rounded-3xl aspect-square md:aspect-auto md:h-full flex flex-col items-center justify-center overflow-hidden relative min-h-[150px] group"
+              class="bg-slate-900 border border-slate-700/50 rounded-3xl aspect-square md:aspect-auto md:h-full flex items-center justify-center overflow-hidden relative min-h-[150px]"
             >
               <img
-                src="images/carimg.jpg"
+                src="images/lfi_car.png"
                 alt="Car Winner"
-                class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                class="absolute m-auto max-w-full max-h-full object-contain"
               />
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent z-10 pointer-events-none"
               ></div>
-
-              <div
-                class="z-20 absolute bottom-4 left-5 text-left pointer-events-none"
-              >
-                <span
-                  class="text-white font-bold tracking-wide text-sm drop-shadow-md"
-                  >Car Winners</span
-                >
-              </div>
             </div>
 
             <div
-              class="bg-slate-900 border border-slate-700/50 rounded-3xl aspect-square md:aspect-auto md:h-full flex flex-col items-center justify-center overflow-hidden relative min-h-[150px] group"
+              class="bg-slate-900 border border-slate-700/50 rounded-3xl aspect-square md:aspect-auto md:h-full flex items-center justify-center overflow-hidden relative min-h-[150px]"
             >
               <img
                 src="images/livefree1.png"
                 alt="Awards and Cheques"
-                class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                class="absolute m-auto max-w-full max-h-full object-contain"
               />
 
               <div
                 class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent z-10 pointer-events-none"
               ></div>
-
-              <div
-                class="z-20 absolute bottom-4 left-5 text-left pointer-events-none"
-              >
-                <span
-                  class="text-white font-bold tracking-wide text-sm drop-shadow-md"
-                  >Milestone Awards</span
-                >
-              </div>
             </div>
           </div>
         </div>
@@ -600,24 +606,5 @@
     <footer class="bg-slate-950 text-slate-500 py-8 text-center text-sm">
       <p>&copy; 2026 LiveFree International. All rights reserved.</p>
     </footer>
-
-    <script>
-      const slider = document.getElementById("salesSlider");
-      const salesDisplay = document.getElementById("salesDisplay");
-      const earningsDisplay = document.getElementById("earningsDisplay");
-
-      function updateCalculator() {
-        const sales = parseInt(slider.value);
-        salesDisplay.textContent = sales;
-
-        let rate = sales >= 20 ? 5000 : 3000;
-        let earnings = sales * rate;
-
-        earningsDisplay.textContent = earnings.toLocaleString("en-NG");
-      }
-
-      slider.addEventListener("input", updateCalculator);
-      updateCalculator();
-    </script>
   </body>
 </html>
